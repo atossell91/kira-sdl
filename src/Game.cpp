@@ -15,7 +15,8 @@ void Game::init() {
     SDL_Init(kInitFlags);
 
     window = SDL_CreateWindow(gameName, kWindowWidth, kWindowHeight, 0);
-    renderer = SDL_CreateRenderer(window, NULL, 0);
+    //renderer = SDL_CreateRenderer(window, NULL, 0);
+    renderer = SDL_CreateRenderer(window, NULL);
     if (renderer == NULL) {
         std::cout << "Renderer is null: " << SDL_GetError() << std::endl;
     }

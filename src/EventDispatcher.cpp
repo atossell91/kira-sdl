@@ -6,7 +6,8 @@
 void EventDispatcher::HandleEvent(SDL_Event& event) {
     if (event.type == SDL_EVENT_KEY_DOWN) {
         for (auto handler : keyDownHandlers) {
-            handler(event.key.keysym.sym);
+            //handler(event.key.keysym.sym);
+            handler(event.key.key);
         }
     }
     else if (event.type == SDL_EVENT_QUIT) {
